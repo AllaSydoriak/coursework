@@ -20,6 +20,12 @@
 //radius
 @menu-border-radius: 8px;
 
+//margins
+@sidebar-right: 70px;
+@sidebar-left: 10px;
+@sidebar-top: 30px;
+@sidebar-bottom: 40px;
+
                           /*VARIABLES END*/
 
 * {
@@ -34,13 +40,14 @@ a{
 body {
   background: @bg-color;
   font: 18px @plain-font @plain-text-color;
+  height: 100%;
 }
 
                                             /*HEADER BEGIN*/
 
 header{
   display: block;
-  border-bottom: 1px solid @plain-text-color;
+  border-bottom: 1px solid @caption-color;
   height: 100px;
   position: relative;
 }
@@ -57,7 +64,7 @@ header{
 nav{
   display: block;
   position: absolute;
-  right: 60px;
+  right: 120px;
   bottom: 0px;
 
     li{
@@ -110,20 +117,91 @@ nav{
 }
                                           /*HEADER END*/
 
-                                          /*FOOTER BEGIN*/
-footer{
-  border-top: 1px solid @plain-text-color;
-  height: 100px;
+.title{
+  position: absolute;
+  z-index: 1;
+  border: 1px solid @plain-text-color;
+  left: 25%;
+  top: -15px;
+  padding: 5px 7px;
+  width: 165px;
+  text-align: center;
+  background-color: @light-color;
+  color: @caption-color;
+  font-weight: bold;
+}
+
+.title1{
+  .title;
+  top: -25px;
+}
+
+.title2{
+  .title;
+  left: 40%;
+}
+
+                                          /*SIDEBAR BEGIN*/
+.sidebar{
+  float: right;
+  display: inline-block;
+  //border: 1px solid black;
+  margin: @sidebar-top @sidebar-right @sidebar-bottom @sidebar-left;
+  width: 27%;
+  min-height: 500px;
+}
+
+.autorization{
   position: relative;
-  top: 55px;
+  border: 1px solid @plain-text-color;
+  min-height: 200px;
+  margin-bottom: @sidebar-bottom;
+}
+
+.actual{
+  position: relative;
+  border: 1px solid @plain-text-color;
+  min-height: 400px;
+  margin-bottom: @sidebar-bottom + 10px;
+}
+
+.feedback{
+  position: relative;
+  border: 1px solid @plain-text-color;
+  min-height: 150px;
+  margin-bottom: @sidebar-bottom - 10px;
+}
+                                          /*SIDEBAR END*/
+
+                                          /*CONTENT BEGIN*/
+.content{
+  position: relative;
+  float: left;
+  display: inline-block;
+  border: 1px solid @plain-text-color;
+  margin: @sidebar-top @sidebar-left @sidebar-bottom @sidebar-right;
+  width: 60%;
+  min-height: 300px;
+}
+                                          /*CONTENT END*/
+
+
+/*
+/*FOOTER BEGIN*/
+footer{
+border: 1px solid @plain-text-color;
+// position: relative;
+height: 95px;
+clear: both;
 }
 
 .footer1{
-  display: block;
-  background-color: @caption-color;
-  border-radius: 0 0 @menu-border-radius @menu-border-radius;
-  height: 60px;
-  width: 500px;
-  margin: 0px auto;
+display: block;
+background-color: @caption-color;
+border-radius: 0 0 @menu-border-radius @menu-border-radius;
+height: 60px;
+width: 500px;
+margin: 0px auto;
+clear: both;
 }
-                                          /*FOOTER END*/
+/*FOOTER END*/
