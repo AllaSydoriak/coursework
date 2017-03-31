@@ -1,0 +1,129 @@
+                          /*VARIABLES BEGIN*/
+//colors
+@bg-color: #ffffff;
+@caption-color: #403435;
+@button-bg-color: #5c5253;
+@plain-text-color: #ddd;
+@light-color: #ffffff;
+@context-caption-color: #7f6769;
+
+//fonts
+@caption-font: serif;
+@plain-font: sans-serif;
+
+//sizes
+@main-caption-font-size: 48px;
+@menu-font-size: 16px;
+@sidebar-captions: 24px;
+@conext-caption: 24px;
+
+//radius
+@menu-border-radius: 8px;
+
+                          /*VARIABLES END*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  background: @bg-color;
+  font: 18px @plain-font @plain-text-color;
+}
+
+                                            /*HEADER BEGIN*/
+
+header{
+  display: block;
+  border-bottom: 1px solid @plain-text-color;
+  height: 100px;
+  position: relative;
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+  // border: 1px solid #e5e5e5;
+    a:hover {
+      background: @context-caption-color;
+    }
+}
+
+nav{
+  display: block;
+  position: absolute;
+  right: 60px;
+  bottom: 0px;
+
+    li{
+      margin-right: -5px;
+      display: inline-block;
+      vertical-align: bottom;
+      white-space: nowrap;
+
+      &:nth-child(1) a{
+        // border-bottom: 30px solid @caption-color;
+        // border-left: 30px solid white;
+        // border-top: none;
+        // border-right: none;
+        // content:'';
+        border-radius: @menu-border-radius 0 0 0;
+      }
+
+      &:nth-child(4) a{
+        // border-bottom: 30px solid @caption-color;
+        // border-right: 30px solid white;
+        border-radius: 0 @menu-border-radius 0 0;
+      }
+
+      a{
+        color: @light-color;
+        background-color: @caption-color;
+        font-size: @menu-font-size;
+        font-family: @caption-font;
+        display: block;
+        padding: 20px 15px 20px;
+      }
+    }
+}
+
+.caption{
+  background: url("./img/caption.png");
+  height: 357px;
+  width: 1213px;
+  margin: 15px auto;
+  padding: 0;
+  position: relative;
+    span{
+      color: @caption-color;
+      font-size: @main-caption-font-size;
+      font-family: @caption-font;
+      position: absolute;
+      top: 60px;
+      left: 45px;
+    }
+}
+                                          /*HEADER END*/
+
+                                          /*FOOTER BEGIN*/
+footer{
+  border-top: 1px solid @plain-text-color;
+  height: 100px;
+  position: relative;
+  top: 55px;
+}
+
+.footer1{
+  display: block;
+  background-color: @caption-color;
+  border-radius: 0 0 @menu-border-radius @menu-border-radius;
+  height: 60px;
+  width: 500px;
+  margin: 0px auto;
+}
+                                          /*FOOTER END*/
