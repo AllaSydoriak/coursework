@@ -66,19 +66,25 @@ nav{
       vertical-align: bottom;
       white-space: nowrap;
 
-      &:nth-child(1) a{
-        // border-bottom: 30px solid @caption-color;
-        // border-left: 30px solid white;
-        // border-top: none;
-        // border-right: none;
-        // content:'';
-        border-radius: @menu-border-radius 0 0 0;
+      &:first-child::before{
+         position: absolute;
+         right: 75px;
+         border-bottom: 60px solid @caption-color;
+         border-left: 77px solid white;
+         border-top: none;
+         border-right: none;
+         content:'';
+        //border-radius: @menu-border-radius 0 0 0;
       }
-
-      &:nth-child(4) a{
-        // border-bottom: 30px solid @caption-color;
-        // border-right: 30px solid white;
-        border-radius: 0 @menu-border-radius 0 0;
+     
+      &:last-child::before{
+         position: absolute;
+         left: 149px;
+         border-bottom: 60px solid @caption-color;
+         border-right: 77px solid white;
+         border-top: none;
+        content:'';
+        //border-radius: 0 @menu-border-radius 0 0;
       }
 
       a{
