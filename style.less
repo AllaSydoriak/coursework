@@ -49,6 +49,7 @@ header{
   display: block;
   border-bottom: 1px solid @caption-color;
   height: 100px;
+  max-height: 20%;
   position: relative;
 }
 
@@ -66,12 +67,10 @@ nav{
   position: absolute;
   right: 120px;
   bottom: 0px;
+  max-width: 80%;
 
     li{
-<<<<<<< HEAD
-=======
       position: relative;
->>>>>>> Fixed main-menu
       margin-right: -5px;
       display: inline-block;
       vertical-align: bottom;
@@ -85,14 +84,10 @@ nav{
          border-top: none;
          border-right: none;
          content:'';
+         max-width: 10%;
         //border-radius: @menu-border-radius 0 0 0;
       }
-<<<<<<< HEAD
-     
-=======
 
-
->>>>>>> Fixed main-menu
       &:last-child::before{
          position: absolute;
          left: 149px;
@@ -100,6 +95,7 @@ nav{
          border-right: 77px solid white;
          border-top: none;
         content:'';
+        max-width: 10%;
         //border-radius: 0 @menu-border-radius 0 0;
       }
 
@@ -114,10 +110,12 @@ nav{
     }
 }
 
-.caption{
-  background: url("./img/caption.png");
-  height: 357px;
+div.caption{
+  background: url("./img/caption.png") no-repeat;
+  height: 337px;
   width: 1213px;
+  max-width: 90%;
+  min-width: 30%;
   margin: 15px auto;
   padding: 0;
   position: relative;
@@ -161,17 +159,11 @@ nav{
   float: right;
   display: inline-block;
   //border: 1px solid black;
-  margin: @sidebar-top @sidebar-right @sidebar-bottom @sidebar-left;
+  margin: @sidebar-top 5% @sidebar-bottom @sidebar-left;
   width: 27%;
   min-height: 500px;
 }
 
-.autorization{
-  position: relative;
-  border: 1px solid @plain-text-color;
-  min-height: 200px;
-  margin-bottom: @sidebar-bottom;
-}
 
 .actual{
   position: relative;
@@ -194,9 +186,9 @@ nav{
   float: left;
   display: inline-block;
   border: 1px solid @plain-text-color;
-  margin: @sidebar-top @sidebar-left @sidebar-bottom @sidebar-right;
+  margin: @sidebar-top @sidebar-left @sidebar-bottom 5%;
   width: 60%;
-  min-height: 300px;
+  min-height: 650px;
 }
                                           /*CONTENT END*/
 
@@ -220,3 +212,59 @@ margin: 0px auto;
 clear: both;
 }
 /*FOOTER END*/
+
+
+                                              /* MEDIA */
+@media screen and(max-width: 1280px) {
+
+  .content{
+    width: 60%;
+    margin: @sidebar-top 1% @sidebar-bottom 5%;
+
+  }
+  .sidebar{
+    width: 27%;
+    margin: @sidebar-top 5% @sidebar-bottom 1%;
+  }
+
+  .caption{
+      margin: 15px auto;
+      width: 1105px;
+  }
+}
+
+
+
+@media screen and (max-width: 769px) {
+
+  .caption{
+      background-position: -250px 0px;
+      margin: 15px auto;
+      width: 1105px;
+  }
+
+  .content{
+    min-width: 90%;
+    margin: 5%;
+  }
+
+  .title{
+    width: 40%;
+    left: 27.5%;
+  }
+
+  .title1{
+    .title;
+  }
+
+  .title2{
+    .title;
+  }
+
+  .sidebar{
+    min-width: 60%;
+    float: none;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
