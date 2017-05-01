@@ -37,18 +37,19 @@
   nav{
     max-width: 70%;
     margin: 0 5% 0 28%;
+}
 
-      li{
+    .main-menu > li{
         &:first-child::before{
            bottom: 0px;
-           right: 66px;
+           right: 65px;
            border-bottom: 40px solid @caption-color;
            border-left: 55px solid white;
         }
 
         &:last-child::before{
            bottom: 0px;
-           left: 134px;
+           left: 133px;
            border-bottom: 40px solid @caption-color;
            border-right: 55px solid white;
         }
@@ -58,8 +59,10 @@
           padding: 11px 10px 11px;
         }
       }
-    }
 
+    .main-menu .sub-menu{
+      left: -2%;
+    }
 
       .main-img{
         height: 215px;

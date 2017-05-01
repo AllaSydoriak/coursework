@@ -1,0 +1,56 @@
+//colors
+@bg-color: #ffffff;
+@caption-color: #403435;
+@button-bg-color: #5c5253;
+@plain-text-color: #ddd;
+@light-color: #ffffff;
+@context-caption-color: #7f6769;
+
+//fonts
+@caption-font: serif;
+@plain-font: sans-serif;
+
+//sizes
+@main-caption-font-size: 1em;
+@menu-font-size: 16px;
+@sidebar-captions: 13px;
+@conext-caption: 20px;
+
+//radius
+@menu-border-radius: 8px;
+
+//margins
+@sidebar-right: 70px;
+@sidebar-left: 10px;
+@sidebar-top: 30px;
+@sidebar-bottom: 40px;
+
+@media screen and (max-width: 285px) {
+
+  nav{
+    margin: 0 3% !important;
+    li{
+      &:first-child::before{
+         right: 52px;
+         border-bottom: 29px solid @caption-color;
+         border-left: 15px solid white;
+      }
+
+      &:last-child::before{
+         left: 111px;
+         border-bottom: 29px solid @caption-color;
+         border-right: 25px solid white;
+      }
+
+      a{
+        font-size: 5px !important;
+      }
+  }
+}
+
+ .caption{
+   span{
+     font-size: 5px;
+   }
+ }
+}

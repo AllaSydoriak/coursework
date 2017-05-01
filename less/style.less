@@ -58,6 +58,7 @@ header{
   // border: 1px solid #e5e5e5;
     a:hover {
       background: @context-caption-color;
+      opacity: 1;
     }
 }
 
@@ -72,54 +73,90 @@ nav{
     li{
       position: relative;
       margin-right: -5px;
-      display: inline-block;
       vertical-align: bottom;
       white-space: nowrap;
-
-      &:first-child::before{
-         position: absolute;
-         right: 81px;
-         border-bottom: 60px solid @caption-color;
-         border-left: 77px solid white;
-         border-top: none;
-         border-right: none;
-         content:'';
-         max-width: 10%;
-        //border-radius: @menu-border-radius 0 0 0;
-      }
-
-      &:last-child::before{
-         position: absolute;
-         left: 161px;
-         border-bottom: 60px solid @caption-color;
-         border-right: 77px solid white;
-         border-top: none;
-        content:'';
-        max-width: 10%;
-        //border-radius: 0 @menu-border-radius 0 0;
-      }
-
-      a{
-        color: @light-color;
-        background-color: @caption-color;
-        font-size: @menu-font-size;
-        font-family: @caption-font;
-        display: block;
-        padding: 20px 15px 20px;
-      }
     }
 }
+
+.main-menu > li{
+  position: relative;
+  display: inline-block;
+
+  a{
+    color: @light-color;
+    background-color: @caption-color;
+    font-size: @menu-font-size;
+    font-family: @caption-font;
+    display: block;
+    padding: 20px 15px 20px;
+  }
+
+  &:first-child::before{
+     position: absolute;
+     right: 80px;
+     border-bottom: 60px solid @caption-color;
+     border-left: 77px solid white;
+     border-top: none;
+     border-right: none;
+     content:'';
+     max-width: 10%;
+    //border-radius: @menu-border-radius 0 0 0;
+  }
+
+  &:last-child::before{
+     position: absolute;
+     left: 160px;
+     border-bottom: 60px solid @caption-color;
+     border-right: 77px solid white;
+     border-top: none;
+    content:'';
+    max-width: 10%;
+    //border-radius: 0 @menu-border-radius 0 0;
+  }
+}
+
+.main-menu .sub-menu{
+  position: absolute;
+  right: 3%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 2;
+  display: none;
+  a{
+    background-color: @context-caption-color;
+    opacity: 0.8;
+    text-align: center;
+    &:hover{
+      background-color: @caption-color;
+      opacity: 1;
+    }
+  }
+}
+
+.main-menu .sub-menu > li{
+  &:nth-child(1){
+    display: none;
+  }
+}
+
+  .main-menu > li:hover .sub-menu{
+    display: block;
+    a{
+
+    }
+  }
 
 .main-img{
   height: 337px;
   width: 1213px;
   max-width: 90%;
-  margin: 2% auto;
+  margin: 3% auto 2%;
   padding: 0;
 }
 
 .caption{
-  background: url("./img/caption.png") no-repeat;
+  background: url("../img/caption.png") no-repeat;
   position: relative;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -128,6 +165,7 @@ nav{
     span{
       color: @caption-color;
       font-size: @main-caption-font-size;
+      font-weight: bold;
       font-family: @caption-font;
       position: absolute;
       top: 13%;

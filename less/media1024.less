@@ -30,20 +30,20 @@
 
                       /*HEADER*/
   nav{
-    max-width: 550%;
+    max-width: 55%;
     margin: 0 7% 0 40%;
-
-      li{
+}
+    .main-menu > li{
         &:first-child::before{
            bottom: 0px;
-           right: 68px;
+           right: 67px;
            border-bottom: 48px solid @caption-color;
            border-left: 70px solid white;
         }
 
         &:last-child::before{
            bottom: 0px;
-           left: 146px;
+           left: 145px;
            border-bottom: 48px solid @caption-color;
            border-right: 70px solid white;
         }
@@ -57,7 +57,18 @@
           padding: 14px 8px 14px;
         }
       }
-  }
+
+      .sub-menu{
+        width: inherit;
+      }
+
+    .main-menu > li:hover .sub-menu{
+      a{
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
 
   .main-img{
     height: 275px;

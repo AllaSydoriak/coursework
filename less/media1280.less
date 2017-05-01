@@ -33,21 +33,18 @@
       height: 80px;
     }
 
-    nav{
-      max-width: 55%;
-      margin: 0 7% 0 45%;
+    .main-menu > li {
 
-    li{
       &:first-child::before{
         bottom: 0px;
-        right: 73px;
+        right: 72px;
         border-bottom: 50px solid @caption-color;
         border-left: 77px solid white;
       }
 
       &:last-child::before{
         bottom: 0px;
-        left: 151px;
+        left: 150px;
         border-bottom: 50px solid @caption-color;
         border-right: 77px solid white;
       }
@@ -56,7 +53,11 @@
         padding: 15px 10px 15px;
       }
     }
-  }
+
+    .main-menu .sub-menu{
+      right: 2%;
+      width: inherit;
+    }
 
   .caption{
 
