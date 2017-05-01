@@ -11,7 +11,7 @@
 @plain-font: sans-serif;
 
 //sizes
-@main-caption-font-size: 48px;
+@main-caption-font-size: 2.25em;
 @menu-font-size: 16px;
 @sidebar-captions: 24px;
 @conext-caption: 24px;
@@ -56,6 +56,20 @@
           display: block;
           padding: 14px 8px 14px;
         }
+      }
+  }
+
+  .main-img{
+    height: 275px;
+  }
+
+  .caption{
+    background-size: contain;
+      span{
+        font-size: @main-caption-font-size;
+        position: absolute;
+        top: 10%;
+        left: 6%;
       }
   }
                         /*HEADER*/

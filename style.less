@@ -12,7 +12,7 @@
 @plain-font: sans-serif;
 
 //sizes
-@main-caption-font-size: 48px;
+@main-caption-font-size: 3em;
 @menu-font-size: 16px;
 @sidebar-captions: 24px;
 @conext-caption: 24px;
@@ -110,22 +110,28 @@ nav{
     }
 }
 
-div.caption{
-  background: url("./img/caption.png") no-repeat;
+.main-img{
   height: 337px;
   width: 1213px;
   max-width: 90%;
-  min-width: 30%;
-  margin: 15px auto;
+  margin: 2% auto;
   padding: 0;
+}
+
+.caption{
+  background: url("./img/caption.png") no-repeat;
   position: relative;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+
     span{
       color: @caption-color;
       font-size: @main-caption-font-size;
       font-family: @caption-font;
       position: absolute;
-      top: 60px;
-      left: 45px;
+      top: 13%;
+      left: 3%;
     }
 }
                                           /*HEADER END*/
@@ -195,7 +201,7 @@ div.caption{
 
                                           /*FOOTER BEGIN*/
 footer{
-border: 1px solid @plain-text-color;
+border-top: 1px solid @caption-color;
 // position: relative;
 height: 95px;
 clear: both;

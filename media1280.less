@@ -11,7 +11,7 @@
 @plain-font: sans-serif;
 
 //sizes
-@main-caption-font-size: 48px;
+@main-caption-font-size: 2.5em;
 @menu-font-size: 16px;
 @sidebar-captions: 24px;
 @conext-caption: 24px;
@@ -27,35 +27,45 @@
 
 /* MEDIA */
 @media screen and(max-width: 1280px) {
-/*HEADER*/
-header{
-height: 80px;
-}
 
-nav{
-max-width: 55%;
-margin: 0 7% 0 45%;
+    /*HEADER*/
+    header{
+      height: 80px;
+    }
 
-li{
-&:first-child::before{
-bottom: 0px;
-right: 73px;
-border-bottom: 50px solid @caption-color;
-border-left: 77px solid white;
-}
+    nav{
+      max-width: 55%;
+      margin: 0 7% 0 45%;
 
-&:last-child::before{
-bottom: 0px;
-left: 138px;
-border-bottom: 50px solid @caption-color;
-border-right: 77px solid white;
-}
+    li{
+      &:first-child::before{
+        bottom: 0px;
+        right: 73px;
+        border-bottom: 50px solid @caption-color;
+        border-left: 77px solid white;
+      }
 
-a{
-padding: 15px 10px 15px;
-}
-}
-}
+      &:last-child::before{
+        bottom: 0px;
+        left: 151px;
+        border-bottom: 50px solid @caption-color;
+        border-right: 77px solid white;
+      }
+
+      a{
+        padding: 15px 10px 15px;
+      }
+    }
+  }
+
+  .caption{
+
+      span{
+        font-size: @main-caption-font-size;
+        top: 13%;
+        left: 5%;
+      }
+  }
 
 /*HEADER*/
 
@@ -71,14 +81,22 @@ width: 27%;
 margin: @sidebar-top 5% @sidebar-bottom 1%;
 }
 
-.caption{
-margin: 15px auto;
-width: 1105px;
+
+.title{
+  width: 30%;
+  left: 32%;
 }
 
 .title1{
+  .title;
 top: -18px;
 }
+
+.title2{
+  width: 24%;
+  left: 37%;
+}
+
 /*CONTENT & SIDEBAR*/
 /*FOOTER*/
 footer{

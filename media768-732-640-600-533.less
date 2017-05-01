@@ -1,0 +1,144 @@
+//colors
+@bg-color: #ffffff;
+@caption-color: #403435;
+@button-bg-color: #5c5253;
+@plain-text-color: #ddd;
+@light-color: #ffffff;
+@context-caption-color: #7f6769;
+
+//fonts
+@caption-font: serif;
+@plain-font: sans-serif;
+
+//sizes
+@main-caption-font-size: 1.5em;
+@menu-font-size: 16px;
+@sidebar-captions: 24px;
+@conext-caption: 24px;
+
+//radius
+@menu-border-radius: 8px;
+
+//margins
+@sidebar-right: 70px;
+@sidebar-left: 10px;
+@sidebar-top: 30px;
+@sidebar-bottom: 40px;
+
+
+@media screen and (max-width: 768px){
+
+.main-img{
+  height: 205px;
+}
+}
+
+@media screen and (max-width: 732px){
+
+.main-img{
+  height: 195px;
+}
+}
+
+@media screen and (max-width: 640px){
+
+  header{
+    width: 100%;
+    height: 60px;
+  }
+
+  nav{
+    max-width: 60%;
+    margin: 0 30% !important;
+
+      li{
+        &:first-child::before{
+           border-bottom: 40px solid @caption-color;
+           border-left: 40px solid white;
+        }
+
+        &:last-child::before{
+           border-bottom: 40px solid @caption-color;
+           border-right: 40px solid white;
+        }
+        &:nth-child(3){
+          display: none;
+        }
+
+        a{
+          font-size: 14px;
+          padding: 11px 10px 11px;
+        }
+      }
+    }
+
+
+    .main-img{
+      height: 170px;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+  header{
+    width: 100%;
+    height: 60px;
+  }
+
+  nav{
+    max-width: 65%;
+    margin: 0 26% !important;
+    }
+
+    .main-img{
+      height: 160px;
+    }
+
+  }
+
+  @media screen and (max-width: 533px){
+
+    header{
+      width: 100%;
+      height: 60px;
+    }
+
+    nav{
+      max-width: 70%;
+      margin: 0 26% !important;
+
+      li{
+        &:first-child::before{
+           bottom: 0px;
+           right: 66px;
+           border-bottom: 38px solid @caption-color;
+           border-left: 30px solid white;
+        }
+
+        &:last-child::before{
+           bottom: 0px;
+           left: 134px;
+           border-bottom: 38px solid @caption-color;
+           border-right: 30px solid white;
+        }
+            a{
+              padding: 10px 10px 10px;
+              font-size: 14px;
+            }
+      }
+    }
+
+      .main-img{
+        height: 145px;
+      }
+
+      .caption{
+          span{
+            font-size: @main-caption-font-size - 0.25em;
+            position: absolute;
+            top: 13%;
+            left: 5%;
+          }
+      }
+
+  }
