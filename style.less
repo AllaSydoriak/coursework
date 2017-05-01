@@ -49,7 +49,6 @@ header{
   display: block;
   border-bottom: 1px solid @caption-color;
   height: 100px;
-  max-height: 20%;
   position: relative;
 }
 
@@ -65,9 +64,10 @@ header{
 nav{
   display: block;
   position: absolute;
-  right: 120px;
+  //right: 120px;
   bottom: 0px;
   max-width: 80%;
+  margin: 0 5% 0 50%;
 
     li{
       position: relative;
@@ -78,7 +78,7 @@ nav{
 
       &:first-child::before{
          position: absolute;
-         right: 75px;
+         right: 81px;
          border-bottom: 60px solid @caption-color;
          border-left: 77px solid white;
          border-top: none;
@@ -90,7 +90,7 @@ nav{
 
       &:last-child::before{
          position: absolute;
-         left: 149px;
+         left: 161px;
          border-bottom: 60px solid @caption-color;
          border-right: 77px solid white;
          border-top: none;
@@ -193,8 +193,7 @@ div.caption{
                                           /*CONTENT END*/
 
 
-/*
-/*FOOTER BEGIN*/
+                                          /*FOOTER BEGIN*/
 footer{
 border: 1px solid @plain-text-color;
 // position: relative;
@@ -203,68 +202,14 @@ clear: both;
 }
 
 .footer1{
-display: block;
 background-color: @caption-color;
-border-radius: 0 0 @menu-border-radius @menu-border-radius;
-height: 60px;
-width: 500px;
+border-top: 60px solid @caption-color;
+border-left: 77px solid white;
+border-top: 60px solid @caption-color;
+border-right: 77px solid white;
+width: 40%;
 margin: 0px auto;
 clear: both;
 }
-/*FOOTER END*/
 
-
-                                              /* MEDIA */
-@media screen and(max-width: 1280px) {
-
-  .content{
-    width: 60%;
-    margin: @sidebar-top 1% @sidebar-bottom 5%;
-
-  }
-  .sidebar{
-    width: 27%;
-    margin: @sidebar-top 5% @sidebar-bottom 1%;
-  }
-
-  .caption{
-      margin: 15px auto;
-      width: 1105px;
-  }
-}
-
-
-
-@media screen and (max-width: 769px) {
-
-  .caption{
-      background-position: -250px 0px;
-      margin: 15px auto;
-      width: 1105px;
-  }
-
-  .content{
-    min-width: 90%;
-    margin: 5%;
-  }
-
-  .title{
-    width: 40%;
-    left: 27.5%;
-  }
-
-  .title1{
-    .title;
-  }
-
-  .title2{
-    .title;
-  }
-
-  .sidebar{
-    min-width: 60%;
-    float: none;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
+                                          /*FOOTER END*/
